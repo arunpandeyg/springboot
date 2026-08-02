@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd" >
+
+    <bean name="emp1" class=" com.springcore.collections.Emp">
+        <property name="empName" value="Raju" />
+        <property name="phones">
+            <list>
+                <value>9810001122</value>
+                <value>9810001123</value>
+                <value>9810001124</value>
+                <null/>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>Delhi</value>
+                <value>Gurgaon</value>
+                <value>Hariyana</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value="2months" />
+                <entry key="Collections" value="2months" />
+                <entry key="DataStructure" value="5months" />
+            </map>
+        </property>
+
+            <!--properties props  -->
+
+        <property name="props">
+                 <props>
+                     <prop key="name">Ravi</prop>
+                     <prop key="phones">9810015225</prop>
+                     <prop key="addresses">Delhi</prop>
+                     <prop key="courses">Motorbike</prop>
+                 </props>
+
+        </property>
+   </bean>
+
+ </beans>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd" >
+
+    <!--it's 1st bean -->
+    <bean class="com.springcore.Student" name="student1" >
+        <!--as attribute p schema not verifying -->
+        <!--as element -->
+        <property name="studentId" value="11" />
+        <property name="studentName" value="Rudra Pandey" />
+        <property name="studentAddress" value="New Delhi" />
+
+        <!--as value -->
+     <!--   <property name="studentId">
+            <value>11</value>
+        </property>
+        <property name="studentName">
+            <value>Ruder Pandey</value>
+        </property>
+        <property name="studentAddress">
+            <value>New Delhi</value>
+        </property> -->
+
+    </bean>
+    <!--it's 2nd bean-->
+    <bean class="com.springcore.Student" name="student2">
+        <property name="studentId" value="12" />
+        <property name="studentName" value="Rudresh Pandey" />
+        <property name="studentAddress" value="New Delhi" />
+
+
+    </bean>
+
+</beans>
+
+
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd
+        ">
+        <context:annotation-config />
+    <util:list list-class="java.util.LinkedList" id="myBestFriends">
+        <value>Aman</value>
+        <value>Ankit</value>
+        <value>Rohit</value>
+        <value>vimal</value>
+        <value>vikash</value>
+    </util:list>
+
+    <!--stand alon map -->
+    <util:map map-class="java.util.HashMap" id="fees">
+        <entry key="Spring Framework" value="8000" />
+        <entry key="Spring Boot Framework" value="9000" />
+        <entry key="Django Framework" value="5000" />
+        <entry key="Hibernate Framework" value="8000" />
+        <entry key="Collections Framework" value="7000" />
+    </util:map>
+   <!-- standalone properties -->
+    <util:properties id="dbconfig">
+        <prop key="driver">com.mysql.jdbc.Driver</prop>
+        <prop key="username">arunpandey</prop>
+        <prop key="password">jaishriraam</prop>
+        <prop key="url">com.mysql:jdbc://localhost:3306/database</prop>
+    </util:properties>
+
+    <bean class="com.springcore.standaloneCollections.Person" name="person1">
+        <property name="friend">
+            <ref bean="myBestFriends" />
+        </property>
+        <property name="feeStructure" ref="fees" />
+        <property name="properties" ref="dbconfig" />
+    </bean>
+
+
+
+
+ </beans>

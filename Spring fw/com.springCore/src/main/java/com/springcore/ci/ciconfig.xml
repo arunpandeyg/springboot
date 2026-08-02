@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd" >
+
+    <!--it's 1st bean constructor injection -->
+    <bean class="com.springcore.ci.Certi" name="cer" >
+        <constructor-arg value="Android and Python" />
+    </bean>
+    <bean class="com.springcore.ci.Person" name="person" >
+        <constructor-arg value="Rudra Pandey" type="String" />
+
+        <constructor-arg value="12" type="int" />
+        <constructor-arg ref="cer" type="Certi" />
+
+    </bean>
+    <bean class="com.springcore.ci.Addition" name="add">
+        <constructor-arg value="12" type="int" index="1" />
+
+        <constructor-arg value="30" type="int" index="0" />
+    </bean>
+
+</beans>
+
+
+
